@@ -35,7 +35,7 @@ class AccountTest {
     }
 
     @Test
-    void withdraw_validAmountsufficientFunds_success() throws IllegalMoneyFormatException, WithdrawInsufficientException {
+    void withdraw_validAmountsufficientFunds_success() {
         assertDoesNotThrow(() -> account.deposit(50));
         assertDoesNotThrow(() -> account.withdraw(50.0));
         assertDoesNotThrow(() -> account.deposit(100.0));

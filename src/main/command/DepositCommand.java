@@ -8,7 +8,7 @@ import main.exception.IllegalMoneyFormatException;
  * A DepositCommand object has an execute method that deposits a specified amount to an account.
  */
 public class DepositCommand extends Command{
-    private Double amount;
+    private final Double amount;
 
     public DepositCommand() {
         this.amount = null;

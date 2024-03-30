@@ -38,7 +38,7 @@ class WithdrawCommandIntegrationTest {
     }
 
     @Test
-    void execute_insufficientFunds_exceptionThrown() throws IllegalMoneyFormatException {
+    void execute_insufficientFunds_exceptionThrown() {
         WithdrawCommand withdrawCommand = new WithdrawCommand(600.0);
 
         String expectedMessage = "Withdraw failed. Insufficient balance." + System.lineSeparator() + DisplayString.PROMPT;

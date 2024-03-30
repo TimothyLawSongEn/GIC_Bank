@@ -8,9 +8,9 @@ import java.util.Date;
  * A transaction has a date, a delta amount, and a balance amount.
  */
 public class Transaction {
-    private Date date;
-    private double delta;
-    private double balance;
+    private final Date date;
+    private final double delta;
+    private final double balance;
 
     public Transaction(double delta, double balance) {
         this.date = new Date();

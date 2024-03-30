@@ -9,7 +9,7 @@ import main.exception.WithdrawInsufficientException;
  * A WithdrawCommand object has an execute method that withdraws a specified amount from an account.
  */
 public class WithdrawCommand extends Command {
-    private Double amount;
+    private final Double amount;
 
     public WithdrawCommand() {
         this.amount = null;
