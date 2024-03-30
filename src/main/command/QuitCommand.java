@@ -1,7 +1,10 @@
-package Command;
+package main.command;
 
-import Model.Account;
+import main.model.Account;
 
+/**
+ * A QuitCommand object has an execute method that returns a goodbye message and quits the program.
+ */
 public class QuitCommand extends Command {
 
     public String execute(Account account) {
