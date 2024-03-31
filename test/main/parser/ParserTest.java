@@ -1,4 +1,4 @@
-package test.parser;
+package main.parser;
 
 import main.command.*;
 import main.exception.IllegalCommandException;

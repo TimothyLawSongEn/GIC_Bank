@@ -24,9 +24,9 @@ public class WithdrawCommand extends Command {
         }
         try {
             account.withdraw(amount);
-            return String.format("Thank you. $%.2f has been withdrawn from your account.", amount) + System.lineSeparator() + DisplayString.PROMPT;
+            return String.format("Thank you. $%.2f has been withdrawn from your account.", amount) + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
         } catch (IllegalMoneyFormatException | WithdrawInsufficientException e) {
-            return "Withdraw failed. " + e.getMessage() + System.lineSeparator() + DisplayString.PROMPT;
+            return "Withdraw failed. " + e.getMessage() + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
         }
     }
 }

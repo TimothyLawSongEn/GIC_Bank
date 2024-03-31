@@ -14,7 +14,7 @@ class PrintCommandIntegrationTest {
         PrintCommand printCommand = new PrintCommand();
 
         String expectedMessage = "No transactions found. Your balance is $0.00"
-                + System.lineSeparator() + DisplayString.PROMPT;
+                + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
         assertEquals(expectedMessage, printCommand.execute(account));
     }
 

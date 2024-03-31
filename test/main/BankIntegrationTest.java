@@ -20,12 +20,12 @@ class BankIntegrationTest {
     void testDepositAndPrintStatement() {
         // Simulate deposit command
         assertEquals("Please enter the amount to deposit:", bankingSystem.process("D"));
-        assertEquals("Thank you. $600.00 has been deposited to your account." + System.lineSeparator() + DisplayString.PROMPT, bankingSystem.process("600"));
+        assertEquals("Thank you. $600.00 has been deposited to your account." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS, bankingSystem.process("600"));
 
         // print and assert that print string contains 500.00
         String printString = bankingSystem.process("P");
         assertTrue(printString.contains("600.00"));
-        assertTrue(printString.contains(DisplayString.PROMPT));
+        assertTrue(printString.contains(DisplayString.PROMPT_OPTIONS));
         assertFalse(printString.contains("fail"));
     }
 
@@ -33,23 +33,23 @@ class BankIntegrationTest {
     void testDepositAndWithdraw() {
         // Simulate deposit command
         assertEquals("Please enter the amount to deposit:", bankingSystem.process("D"));
-        assertEquals("Thank you. $500.00 has been deposited to your account." + System.lineSeparator() + DisplayString.PROMPT, bankingSystem.process("500"));
+        assertEquals("Thank you. $500.00 has been deposited to your account." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS, bankingSystem.process("500"));
 
         // Simulate withdraw command
         assertEquals("Please enter the amount to withdraw:", bankingSystem.process("W"));
-        assertEquals("Thank you. $500.00 has been withdrawn from your account." + System.lineSeparator() + DisplayString.PROMPT, bankingSystem.process("500"));
+        assertEquals("Thank you. $500.00 has been withdrawn from your account." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS, bankingSystem.process("500"));
 
         // print and assert that print string contains 400.00
         String printString = bankingSystem.process("P");
         assertTrue(printString.contains("500.00"));
         assertTrue(printString.contains("0.00"));
         assertTrue(printString.contains("-500.00"));
-        assertTrue(printString.contains(DisplayString.PROMPT));
+        assertTrue(printString.contains(DisplayString.PROMPT_OPTIONS));
         assertFalse(printString.contains("fail"));
 
         // withdraw again
         assertEquals("Please enter the amount to withdraw:", bankingSystem.process("W"));
-        assertEquals("Withdraw failed. Insufficient balance." + System.lineSeparator() + DisplayString.PROMPT, bankingSystem.process("500"));
+        assertEquals("Withdraw failed. Insufficient balance." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS, bankingSystem.process("500"));
     }
 
     // quit
@@ -65,12 +65,12 @@ class BankIntegrationTest {
     // negative tests
     @Test
     void process_invalidCommand_fail() {
-        assertEquals("Transaction failed. Invalid command provided." + System.lineSeparator() + DisplayString.PROMPT, bankingSystem.process("X"));
+        assertEquals("Transaction failed. Invalid command provided." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS, bankingSystem.process("X"));
     }
 
     @Test
     void process_invalidAmount_fail() {
         assertEquals("Please enter the amount to deposit:", bankingSystem.process("D"));
-        assertEquals("Deposit failed. Invalid Money format provided: Amount must be positive." + System.lineSeparator() + DisplayString.PROMPT, bankingSystem.process("-500"));
+        assertEquals("Deposit failed. Invalid Money format provided: Amount must be positive." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS, bankingSystem.process("-500"));
     }
 }

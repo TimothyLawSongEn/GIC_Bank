@@ -4,10 +4,6 @@ import main.util.DisplayString;
 
 import java.util.Scanner;
 
-// TODO: small bug: 1.0000000000001 as input
-
-// Improve: 1) float precision 2) mock test cases 3) dependency injection 4) whr to catch exception 5) System.getProperty(lineseperator)
-
 /**
  * UI class to handle user input and output.
  */
@@ -16,8 +12,7 @@ public class UI {
         BankingSystem bankingSystem = new BankingSystem();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println(DisplayString.WELCOME);
-        System.out.println(DisplayString.PROMPT);
+        System.out.println(DisplayString.WELCOME_OPTIONS);
 
         while (!bankingSystem.isExit()) {
             try {
@@ -26,7 +21,7 @@ public class UI {
                 System.out.println(display);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
-                System.out.println(DisplayString.PROMPT);
+                System.out.println(DisplayString.PROMPT_OPTIONS);
             }
         }
     }

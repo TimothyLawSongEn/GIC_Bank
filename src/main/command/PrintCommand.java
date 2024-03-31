@@ -25,7 +25,7 @@ public class PrintCommand extends Command {
             sj.add("------------------------------------------");
         }
 
-        sj.add(DisplayString.PROMPT);
+        sj.add(DisplayString.PROMPT_OPTIONS);
         return sj.toString();
     }
 }

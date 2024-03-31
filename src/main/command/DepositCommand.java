@@ -24,8 +24,8 @@ public class DepositCommand extends Command{
         try {
             account.deposit(amount);
         } catch (IllegalMoneyFormatException e) {
-            return "Deposit failed. " + e.getMessage() + System.lineSeparator() + DisplayString.PROMPT;
+            return "Deposit failed. " + e.getMessage() + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
         }
-        return String.format("Thank you. $%.2f has been deposited to your account.", amount) + System.lineSeparator() + DisplayString.PROMPT;
+        return String.format("Thank you. $%.2f has been deposited to your account.", amount) + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
     }
 }

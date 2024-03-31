@@ -1,4 +1,4 @@
-## Running Instructions for the Banking App
+## Running Instructions for GIC Banking App
 Choose the method that best suits your preference and environment to run the Banking App.
 
 1. **Compilation and Execution via Command Line:**

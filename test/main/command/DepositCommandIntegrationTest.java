@@ -20,7 +20,7 @@ class DepositCommandIntegrationTest {
     void execute_validAmount_success() {
         DepositCommand depositCommand = new DepositCommand(100.0);
 
-        String expectedMessage = "Thank you. $100.00 has been deposited to your account." + System.lineSeparator() + DisplayString.PROMPT;
+        String expectedMessage = "Thank you. $100.00 has been deposited to your account." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
 
         assertEquals(expectedMessage, depositCommand.execute(account));
     }
@@ -38,7 +38,7 @@ class DepositCommandIntegrationTest {
     void execute_excessDecimalAmount_exceptionThrown() {
         DepositCommand depositCommand = new DepositCommand(5.0001);
 
-        String expectedMessage = "Deposit failed. Invalid Money format provided: Amount must have at most 2 decimal places." + System.lineSeparator() + DisplayString.PROMPT;
+        String expectedMessage = "Deposit failed. Invalid Money format provided: Amount must have at most 2 decimal places." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
 
         assertEquals(expectedMessage, depositCommand.execute(account));
     }
@@ -47,7 +47,7 @@ class DepositCommandIntegrationTest {
     void execute_negativeAmount_exceptionThrown() {
         DepositCommand depositCommand = new DepositCommand(-50.0);
 
-        String expectedMessage = "Deposit failed. Invalid Money format provided: Amount must be positive." + System.lineSeparator() + DisplayString.PROMPT;
+        String expectedMessage = "Deposit failed. Invalid Money format provided: Amount must be positive." + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
 
         assertEquals(expectedMessage, depositCommand.execute(account));
     }

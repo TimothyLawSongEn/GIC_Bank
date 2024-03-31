@@ -26,7 +26,7 @@ public class BankingSystem {
             isExit = cmd.isExit();
             return response;
         } catch (IllegalSecondInputException | IllegalCommandException e) {
-            return FAIL_MSG + " " + e.getMessage() + System.lineSeparator() + DisplayString.PROMPT;
+            return FAIL_MSG + " " + e.getMessage() + System.lineSeparator() + DisplayString.PROMPT_OPTIONS;
         }
     }
 
