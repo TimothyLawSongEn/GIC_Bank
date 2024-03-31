@@ -3,7 +3,6 @@ package main.parser;
 import main.command.*;
 import main.exception.IllegalCommandException;
 import main.exception.IllegalSecondInputException;
-import main.parser.Parser;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
