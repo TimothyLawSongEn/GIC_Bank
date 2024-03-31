@@ -12,7 +12,7 @@ import java.util.StringJoiner;
 public class PrintCommand extends Command {
 
     public String execute(Account account) {
-        StringJoiner sj = new StringJoiner("\n");
+        StringJoiner sj = new StringJoiner(System.lineSeparator());
         if (account.getTransactionList().isEmpty()) {
             sj.add("No transactions found. Your balance is $0.00");
         } else {

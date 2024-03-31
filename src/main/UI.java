@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 // TODO: small bug: 1.0000000000001 as input
 
-// Improve: 1) float precision 2) mock test cases 3) dependency injection 4) whr to catch exception
+// Improve: 1) float precision 2) mock test cases 3) dependency injection 4) whr to catch exception 5) System.getProperty(lineseperator)
 
 /**
  * UI class to handle user input and output.

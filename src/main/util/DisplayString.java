@@ -6,9 +6,9 @@ package main.util;
 public class DisplayString {
     public static final String WELCOME = "Welcome to the GIC Bank!";
     public static final String PROMPT =
-            "Is there anything else you'd like to do?\n" +
-            "[D]eposit \n" +
-            "[W]ithdraw\n" +
-            "[P]rint statement\n" +
+            "Is there anything else you'd like to do?" + System.lineSeparator() +
+            "[D]eposit" + System.lineSeparator() +
+            "[W]ithdraw" + System.lineSeparator() +
+            "[P]rint statement" + System.lineSeparator() +
             "[Q]uit";
 }
